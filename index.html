@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Complex</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">	
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" >
+
+			<div class="header__container container">
+				<div class="header__menu-wrapper">
+					<div class="header__top">
+						<a class="header__logo logo" href="#">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<div class="header__icon">
+							<span></span>
+						</div>
+						<nav class="header__menu">
+							<ul class="menu">
+								<li><a data-goto=".header" class="menu__link" href="#">О комплексе</a></li>
+								<li><a data-goto=".application" class="menu__link" href="#">Район</a></li>
+								<li> <a data-goto=".catalog" class="menu__link" href="#">Каталог квартир</a> </li>
+								<!-- <li><a data-goto="section_4" class="menu__link" href="#">Ипотека</a> </li> -->
+								<li> <a data-goto=".footer" class="menu__link" href="#">Контакты</a> </li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+
+				<div class="header__wrapper">
+
+					<div class="header__title">
+						<h1>Жилой комплекс в&nbsp;историческом&nbsp;центре </h1>
+					</div>
+
+					<div class="header__info">
+
+						<div class="header__item">
+							<img src="./img/header/point.svg" alt="">
+							<div class="header__text">Наб. реки Фонтанки 10-15</div>
+
+						</div>
+
+						<a href="tel:88121234567" class="header__item">
+							<img src="./img/header/phone.svg" alt="">
+							<div class="header__text"> 8 (812) 123-45-67</div>
+
+						</a>
+					</div>
+
+				</div>
+			</div>
+			<picture>
+				<source srcset="./img/header/bg5.jpg" media="(max-width: 768px)" type="image/jpg">
+				<source srcset="./img/header/bg.webp"  type="image/webp">
+				<img class="header__bg" loading="lazy" src="./img/header/bg.jpg" srcset="./img/header/bg.jpg 2x"  alt="">
+			</picture>
+
+
+		</header>
+		<main class="main">
+			<section class="info ">
+				<div class="wrapper-num">
+					<div class="container">
+
+						<div class="info__wrapper ">
+							<div class="info__item">
+								<div class="info__img">
+									<img src="img/info/bench.svg" alt="">
+								</div>
+								<div class="info__text">Рядом исторические парки и скверы</div>
+							</div>
+							<div class="info__item">
+								<div class="info__img">
+									<img src="img/info/building.svg" alt="">
+								</div>
+								<div class="info__text">Полностью
+									обустроенный</div>
+							</div>
+							<div class="info__item">
+								<div class="info__img">
+									<img src="img/info/fountain.svg" alt="">
+								</div>
+								<div class="info__text">10 фонтанов
+									на территории</div>
+							</div>
+							<div class="info__item">
+								<div class="info__img">
+									<img src="img/info/bicycle.svg" alt="">
+								</div>
+								<div class="info__text">6 км
+									велодорожек</div>
+							</div>
+							<div class="info__right right">
+								<img src="./img/info/II.svg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="catalog">
+				<div class="wrapper-num">
+					<div class="container">
+						<h2 class="catalog__title title">Наши квартиры</h2>
+						<div class="catalog__grid">
+							<div class="catalog__wrapper">
+								<div class="catalog__subtitle">Лофт — 3 этажa</div>
+								<picture class="catalog__img" data-fancybox="gallery"
+										data-src="./img/catalog/12x.webp?raw=true"
+										data-caption="Лофт — 3 этажа">
+										<source srcset="./img/catalog/05.jpg?raw=true" media="(max-width: 650px)">
+										
+										<img class="catalog__img-grid" src="./img/catalog/11x.webp?raw=true" alt="img" loading="lazy">
+									
+								</picture>
+							</div>
+							<div class="catalog__wrapper">
+								<div class="catalog__subtitle">Лофт — 2 этажa</div>
+								<picture class="catalog__img" data-fancybox="gallery" data-src="./img/catalog/22x.webp?raw=true"
+										data-caption="Лофт — 2 этажа">
+										<source srcset="./img/catalog/21x.webp?raw=true" type="image/webp">
+										<img class="catalog__img-grid" src="./img/catalog/21x.webp?raw=true" alt="img" loading="lazy">
+									
+								</picture>
+							</div>
+							<div class="catalog__wrapper">
+								<div class="catalog__subtitle">Лофт — 3 этажa</div>
+								<picture class="catalog__img" data-fancybox="gallery" data-src="./img/catalog/12x.webp?raw=true" data-caption="Лофт — 3 этажа">
+
+										<source srcset="./img/catalog/11x.webp?raw=true" type="image/webp">
+										<img class="catalog__img-grid" src="./img/catalog/11x.webp?raw=true" alt="img" loading="lazy">
+									
+								</picture>
+							</div>
+							<div class="catalog__wrapper">
+								<div class="catalog__subtitle">Лофт — 2 этажa</div>
+								<picture class="catalog__img" data-fancybox="gallery" data-src="./img/catalog/22x.webp?raw=true"
+										data-caption="Лофт — 2 этажа">
+										<source srcset="./img/catalog/21x.webp?raw=true" type="image/webp">
+										<img class="catalog__img-grid" src="./img/catalog/21x.webp?raw=true" alt="img" loading="lazy">
+									
+								</picture>
+							</div>
+						</div>
+						<div class="catalog__left left">
+							<img src="./img/catalog/III.svg" alt="">
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="application">
+				<div class="container">
+					<div class="application__row">
+						<div class="application__block">
+							<h2 class="application__title title">Хотите посмотреть?</h2>
+							<div class="application__text">Выбор района для покупки жилья - это не менее важный вопрос, чем
+								этаж, на котором она находится и количество комнат в
+								вашей будущей квартире. Для того чтобы вам было легче определиться предлагаем оставить
+								контактные данные.Выбор района для покупки жилья - это не менее важный вопрос.
+							</div>
+						</div>
+						<form  class="form application__form  ">
+							
+								<input class="form__input name application__input req " type="text" placeholder="Ваше имя">
+								<input class="form__input phone application__input req " type="tel" placeholder="Ваш телефон">
+								<button class="form__btn application__btn ">
+									<span> Посмотреть район</span>
+								</button>
+								<div class=" form__sub-text application__sub-text ">*Мы никому не передаем ваши данные.
+									И не сохраняем ваш номер в базу. 
+								</div>
+						</form >
+					</div>
+				</div>
+				<picture>
+					<img class="application__bg" src="./img/application/ap__bg.webp" alt="">
+				</picture>
+
+			</section>
+			<section class="video">
+				<div class="wrapper-num">
+					<div class="container">
+						
+							<div class="video__play">
+								<div class="video__btn">
+									<img src="./img/video/play.svg" alt="">
+								</div>
+								<video class="video__main" id="selection__video" src="./video/particles04.mp4" poster="./img/video/video.png"></video>
+							</div>
+						
+						<div class="video__right right">
+							<img src="./img/video/IV.svg" alt="">
+						</div>
+						
+
+					</div>
+				</div>
+			</section>
+			<section class="question">
+				<div class="wrapper-nam">
+					<div class="container">
+						<div class="question__title title">Есть вопросы?</div>
+						<form  class="question__row form">
+							<input class="form__input name question__input req" type="text" placeholder="Ваше имя">
+							<input class="form__input phone question__input req" type="tel" placeholder="Ваш телефон">
+							<button class="form__btn question__btn">
+								<span> Посмотреть район</span>
+							</button>
+							<div class="form__sub-text question__sub-text">
+								*Мы никому не передаем ваши данные.
+								И не сохраняем ваш номер в базу.
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<a class="footer__logo logo" href="#">
+						<img src="img/logo.svg" alt="logo">
+					</a>
+					<nav class="footer__menu ">
+						<ul class="menu menu-bottom ">
+							<li><a data-goto=".info" class="menu__link" href="#">О комплексе</a></li>
+							<li><a data-goto=".application" class="menu__link" href="#">Район</a></li>
+							<li> <a data-goto=".catalog" class="menu__link" href="#">Каталог квартир</a> </li>
+							
+							<li> <a data-goto=".footer" class="menu__link" href="#">Контакты</a> </li>
+						</ul>
+					</nav>
+					<div class="footer__contacts">
+						<p>Адрес: Наб. реки Фонтанки 10-15</p>
+						<p>Телефон:<a href="tel:88121234567"> 8 (812) 123-45-67</a></p>
+						<p>Отдел продаж: 10:00 - 20:00</p>
+						<p>E-mail: <a href="#">vip@housevip.ru</a> </p>
+						
+							<ul class="footer__social">
+								<li><a href="#" class="footer__item">
+									<img src="./img/footer/youtube.svg" alt="">
+									</a>
+								</li>
+								<li><a href="#" class="footer__item">
+										<img src="./img/footer/Group.svg" alt="">
+									</a>
+								</li>
+								<li><a href="#" class="footer__item">
+										<img src="./img/footer/facebook-logo.svg" alt="">
+									</a>
+								</li>
+								<li><a href="#" class="footer__item">
+										<img src="./img/footer/instagram.svg" alt="">
+									</a>
+								</li>
+							</ul>
+						
+					</div>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script>
+		Fancybox.bind('[data-fancybox="gallery"]', {
+			infinite: false
+		});
+
+	</script>
+	<script src="./js/script.js"></script>
+
+</body>
+
+</html>
