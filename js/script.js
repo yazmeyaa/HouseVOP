@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use strict"
 
 
@@ -70,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	const playVideo = document.getElementById('selection__video');
 
 	btnVideo.addEventListener('click', () => {
-		if (btnVideo){
+		if (btnVideo) {
 			playVideo.play();
 			btnVideo.style.display = "none";
 			playVideo.setAttribute('controls', 'controls');
 		}
-		
+
 	});
 
 	//form
@@ -83,66 +84,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	form.forEach(form => {
 		form.addEventListener('submit', formSend);
-		
+
 	})
-	
-		
 
-	
-
-	async function formSend(e){
+	async function formSend(e) {
 		e.preventDefault();
-
-		let error = formValidate(form);
-
+		let errors = formValidate(this);	//! Передаём this, который указывает на текущую форму
+		if (errors) console.log(errors)
 	}
 
-	function formValidate(form){
-		let error = 0;
-		let formReq = document.querySelectorAll('.req');
-		
+	function formValidate(form) {
+		let errors = false;
+		const formReq = Array.from(form.childNodes).filter(item => item.tagName === 'INPUT') //! Получаем только <input> из формы и заносим их в массив
 
-		for (let i = 0; i < formReq.length; i++){
+		for (let i = 0; i < formReq.length; i++) {
 			const input = formReq[i];
 			formRemoveError(input);
-
+			//! Здесь я удалил переменную error и вынес её на уровень выше, чтобы можно было вернуть из функции (95 строка)
 			if (input.classList.contains('phone')) {
 				if (telTest(input)) {
 					formAddError(input);
-					error++;
+					errors = true;
 				}
 			}
-			
-			else{
-				if(input.value === ''){
+
+			else {
+				if (input.value === '') {
 					formAddError(input);
-					error++;
+					errors = true;
 				}
 			}
 
 			if (input.classList.contains('name')) {
 				if (nameTest(input)) {
 					formAddError(input);
-					error++;
+					errors = true;
 				}
 			}
 			else {
 				if (input.value === '') {
 					formAddError(input);
-					error++;
+					errors = true;
 				}
 			}
-			
+
 		}
 
-		
+		return errors = true	//! Возвращаем наличие ошибки в форме
+
 	}
 
 
-	
 
-	function formAddError(input){
-		
+
+	function formAddError(input) {
+
 		input.classList.add('error');
 	}
 	function formRemoveError(input) {
@@ -150,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	//test phone
-	function telTest(input){
+	function telTest(input) {
 		return !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(input.value);
 	}
 
